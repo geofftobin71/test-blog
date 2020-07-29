@@ -8,7 +8,7 @@ on:
       upload:
         description: 'Upload via FTP'     
         required: false
-        default: false
+        default: 'false'
 
 jobs:
   build:
@@ -23,7 +23,7 @@ jobs:
       with:
         install_dependencies: true      
     - name: Deploy
-      if: ${{ github.event.inputs.upload }}
+      if: ${{ github.event.inputs.upload == 'true' }}
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
         ftp-server: ftp://ftp.floriade.co.nz/
