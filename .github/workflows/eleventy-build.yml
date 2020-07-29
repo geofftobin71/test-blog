@@ -20,7 +20,7 @@ jobs:
     - name: Deploy
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: ftp://ftp.floriade.co.nz/public_html/eleventy/
+        ftp-server: ftp://ftp.floriade.co.nz/
         ftp-username: geoff@floriade.co.nz
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         local-dir: _site
