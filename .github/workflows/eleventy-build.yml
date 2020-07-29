@@ -24,4 +24,3 @@ jobs:
         ftp-username: geoff@floriade.co.nz
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         local-dir: _site
-        git-ftp-args: --dry-run
